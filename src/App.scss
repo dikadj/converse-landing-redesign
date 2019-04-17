@@ -1,8 +1,48 @@
 html, body {
-  overflow-y: hidden;
+  overflow-x: hidden;
   // #logo {
   //   max-width: 120px;
   //   font-size: .875rem;
   //   line-height: 1.15;
   // }
+
+}
+
+.c-button-dark-sm {
+  text-decoration: none;
+  background: rgb(0,0,0);
+  color: rgb(255,255,255);
+  transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+
+  &:hover {
+    background:  rgba(0,0,0,0.65);
+    transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  }
+}
+
+.c-button-light-sm {
+  text-decoration: none;
+  background: rgb(255,255,255);
+  color: rgb(0,0,0);
+  border-color: rgb(0,0,0)!important;
+  transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+
+  &:hover {
+    color:  rgba(0,0,0,0.65)!important;
+    border-color:  rgba(0,0,0,0.65)!important;
+    transition: opacity 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  }
+}
+
+.c-button-light-md {
+  text-decoration: none;
+  background: rgb(255,255,255);
+  color: rgb(0,0,0);
+  transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+
+  &:hover {
+    background: rgb(0,0,0)!important;
+    color:  rgb(255,255,255)!important;
+    transition: color 426ms cubic-bezier(.4,.9,.3,1),color 426ms cubic-bezier(.4,.9,.3,1),border-color 426ms cubic-bezier(.4,.9,.3,1),background-color 426ms cubic-bezier(.4,.9,.3,1);
+  }
 }

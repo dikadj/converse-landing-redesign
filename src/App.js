@@ -17,58 +17,151 @@ const ConverseLogo = () => (
 )
 
 const Header = () => (
-  <div id="header" className="position-fixed">
-    <nav id="nav-bar">
-      <div className="d-flex"
-        style={{ height: "50px", width: "100vw" }}
-      >
-        {/* toggle button */}
-        <div className="col-3 d-flex d-md-none align-items-center justify-content-start">
-          <button type="button" className="btn row" style={{ cursor: "pointer" }}
-            onClick={() => {
-              anime({
-                targets: "#drawer",
-                translateX: "100vw",
-              })
-            }}
-          >
-            <FaBars />
-          </button>
-        </div>
-        <div className="col-6 col-md-9 col-lg-7 d-flex align-items-center justify-content-center justify-content-md-start">
-          <div id="logo" className="px-2" style={{ maxWidth: "120px", fontSize: ".875rem", lineHeight: "1.15" }}>
-            <ConverseLogo/>
+  <div id="header">
+    <div className="sticky-top border-bottom"
+      style={{
+        background: "rgb(255,255,255)",
+        borderBottomColor: "rgb(229, 229, 229)",
+      }}
+    >
+      <nav id="nav-bar">
+        <div className="d-flex"
+          // later: make height 60px on medium view
+          style={{ height: "50px", width: "100vw" }}
+        >
+          {/* toggle button */}
+          <div className="col-3 d-flex d-md-none align-items-center justify-content-start">
+            <button type="button" className="btn row" style={{ cursor: "pointer" }}
+              onClick={() => {
+                anime({
+                  targets: "#drawer",
+                  translateX: "100vw",
+                })
+              }}
+            >
+              <FaBars />
+            </button>
           </div>
+          <div className="col-6 col-md-9 col-lg-7 d-flex align-items-center justify-content-center justify-content-md-start">
+            <div id="logo" className="px-2" style={{ maxWidth: "120px", fontSize: ".875rem", lineHeight: "1.15" }}>
+              <ConverseLogo/>
+            </div>
 
-          {/* nav collapsed on breakpoint */}
-          <div id="toggledNavItems" className="d-none d-md-flex">
-            <div className="px-2">
-              <span>New Arrival</span>
+            {/* nav collapsed on breakpoint */}
+            <div id="toggledNavItems" className="d-none d-md-flex">
+              <div className="px-2">
+                <span>New Arrival</span>
+              </div>
+              <div className="px-2">
+                <span>Featured</span>
+              </div>
+              <div className="px-2">
+                <span>Showcase</span>
+              </div>
             </div>
-            <div className="px-2">
-              <span>Featured</span>
-            </div>
-            <div className="px-2">
-              <span>Showcase</span>
-            </div>
-          </div>
 
+          </div>
+          <div className="col-3 col-md-3 col-lg-5 d-flex align-items-center justify-content-end">
+            <div className="" style={{ cursor: "pointer" }}>
+              <FiShoppingCart />
+            </div>
+            <div className="px-3" style={{ cursor: "pointer" }}>
+              <FiSearch style={{ transform: "scaleX(-1)" }} />
+            </div>
+          </div>
         </div>
-        <div className="col-3 col-md-3 col-lg-5 d-flex align-items-center justify-content-end">
-          <div className="" style={{ cursor: "pointer" }}>
-            <FiShoppingCart />
+      </nav>
+    </div>
+
+    <div id="highlightSection" className="d-md-flex flex-column" style={{}}>
+
+      {/* on small view */}
+      <div id="headline-sm" className="py-4 px-3 d-md-none">
+        <h2 className="text-uppercase font-weight-bolder">
+          Count Down <br />To Summer
+        </h2>
+      </div>
+
+      {/* on medium view */}
+      <div className="d-none d-md-flex">
+        <div style={{ flex: "1" }}>
+          <div id="headline-md d-flex">
+            <div className="" style={{
+              backgroundImage: "url(" + require("./img/highlight.jpg") + ")",
+              // img source:
+              // https://www.converse.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dw8a0656f5/firstspirit/media/homepage_1/2019_summer_1/04_12/dt_79/D-Homepage-4-11-P1-PalmTreePlate-image-1-SU19.jpg
+              backgroundColor: "rgb(255,255,255)",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              color: "rgb(255,255,255)",
+              height: "50vh",
+              flex: "1",
+            }}>
+              <div className="p-3">
+                <h1 className="text-uppercase font-weght-bold">
+                  Count Down <br />To Summer
+                </h1>
+                <div id="highlightAction-sm" className="">
+                  <div>
+                    <input type="button" value="Shop Crochet Styles" className="c-button-light-md border-0 px-3 py-2 mt-3 font-weight-bold c-button-dark" />
+                  </div>
+                  <div>
+                    <button type="button" className="c-button-light-md border-0 px-3 py-2 mt-3 font-weight-bold c-button-dark">
+                      Shop New Arrivals
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex" style={{ flex: "1" }}>
+              <div style={{ flex: "1" }}>
+                <img src={require("./img/highlight2.gif")} alt="highlight2" width="100%" />
+                {/*
+                  img src:
+                  https://www.converse.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dwdc094d11/firstspirit/media/homepage_1/2019_summer_1/04_12/dt_79/D-Homepage-4-11-Crochet-Custom_Animation-On-Body.gif
+                */}
+              </div>
+              <div style={{ flex: "1" }}>
+                <img src={require("./img/highlight3.jpg")} alt="highlight3" width="100%" />
+                {/*
+                  img src:
+                  https://www.converse.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dw70210dd9/firstspirit/media/homepage_1/2019_summer_1/04_12/dt_79/D-Homepage-4-11-P1-Mens-Chuck70-image-3-shoe-SU19.jpg
+                */}
+              </div>
+            </div>
           </div>
-          <div className="px-3" style={{ cursor: "pointer" }}>
-            <FiSearch style={{ transform: "scaleX(-1)" }} />
-          </div>
+        </div>
+        {/* md view */}
+        <div id="highlight1-md" className=""
+          style={{
+            flex: "1",
+            backgroundImage: "url(" + require("./img/highlight1.jpg") + ")",
+            backgroundColor: "#fff",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            // height: "100vh",
+            width: "50vw",
+          }}
+        >
+
         </div>
       </div>
-    </nav>
+    </div>
+
+    {/* sm view */}
+    <div id="highlight1-sm" className="d-md-none">
+      <img src={require("./img/highlight1.jpg")} className=""
+        // img source:
+        // https://www.converse.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dwc7a95fe1/firstspirit/media/homepage_1/2019_summer_1/04_12/mob_78/M-Homepage-4-11-Dashboard1-Crochet-image-1-shoe-SU19.jpg
+        alt="highlight1"
+        style={{ maxWidth: "100%", objectFit: "cover" }}
+      />
+    </div>
   </div>
 )
 
 const Drawer = () => (
-  <div id="drawer" className="d-flex flex-column d-md-none"
+  <div id="drawer" className="sticky-top d-flex flex-column d-md-none"
     style={{
       height: "100vh",
       width: "100vw",
@@ -106,6 +199,7 @@ const Drawer = () => (
     </div>
   </div>
 )
+
 const App = () => (
   <div>
     <Helmet>
@@ -113,10 +207,18 @@ const App = () => (
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
     </Helmet>
 
-    <div className="" style={{ height: "200vh" }}> {/* remove inline style later */}
+    <div className=""> {/* remove inline style later */}
       {/* Start content here */}
       <Header />
       <Drawer />
+      <div id="highlightAction-sm" className="container d-md-none">
+        <div className="d-flex flex-column px-3 py-4">
+          <input type="button" value="Shop Crochet Styles" className="border-0 px-5 py-3 mt-3 font-weight-bold c-button-dark-sm" />
+          <button type="button" className="border border-dark px-5 py-3 mt-3 font-weight-bold c-button-light-sm">
+            Shop New Arrivals
+          </button>
+        </div>
+      </div>
       {/* End content here */}
     </div>
 
