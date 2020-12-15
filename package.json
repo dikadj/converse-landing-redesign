@@ -2,6 +2,7 @@
   "name": "converse-landing-redesign",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dikadj.github.io/converse-landing-redesign",
   "dependencies": {
     "animejs": "^3.0.1",
     "jquery": "^3.4.0",
