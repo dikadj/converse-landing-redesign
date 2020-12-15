@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/helper-regex": "^7.10.5",
     "animejs": "^3.0.1",
     "jquery": "^3.4.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "4.14.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
